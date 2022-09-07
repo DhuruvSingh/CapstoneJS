@@ -4,13 +4,13 @@ class Comments {
     this.comments = [];
   }
 
-  async addComment(id, name, comment) {
+  async addComment(id, name, new_comment) {
     await fetch(this.url, {
       method: 'POST',
       body: JSON.stringify({
         item_id: id,
         username: name,
-        comment: comment,
+        comment: new_comment,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -135,6 +135,7 @@ const activateComments = async () => {
             comments.getComments(id)
               .then((data) => {
                 commentList.innerHTML = '';
+                commentList.appendChild(listTitle);
                 data.forEach((comment) => {
                   const newComment = document.createElement('p');
                   newComment.innerHTML = `<strong>${comment.creation_date}:</strong> ${comment.username}: "${comment.comment}".`;

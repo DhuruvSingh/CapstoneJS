@@ -4,13 +4,13 @@ class Comments {
     this.comments = [];
   }
 
-  async addComment(id, name, new_comment) {
+  async addComment(id, name, _comment) {
     await fetch(this.url, {
       method: 'POST',
       body: JSON.stringify({
         item_id: id,
         username: name,
-        comment: new_comment,
+        comment: _comment,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

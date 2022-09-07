@@ -10,7 +10,7 @@ class Comments {
       body: JSON.stringify({
         item_id: id,
         username: name,
-        comment: newCsomment,
+        comment: newComment,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

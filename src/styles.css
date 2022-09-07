@@ -50,6 +50,7 @@ footer {
   padding: 20px;
   padding-left: 3%;
   background-color: antiquewhite;
+  position: fixed;
 }
 
 footer > a {
@@ -69,4 +70,10 @@ footer > a {
 
 .hidden {
   display: none;
+}
+
+.series {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: auto auto auto auto;
 }

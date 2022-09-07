@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Peter1907/capstone-2.git"
+    "url": "git@github.com:DhuruvSingh/CapstoneJS.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Peter1907/capstone-2/issues"
+    "url": "https://github.com/DhuruvSingh/CapstoneJS.git/issues"
   },
-  "homepage": "https://github.com/Peter1907/capstone-2",
+  "homepage": "https://github.com/DhuruvSingh/CapstoneJS.git",
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",

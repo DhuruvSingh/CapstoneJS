@@ -1,3 +1,5 @@
+import counter from './counter.js';
+
 class Reservations {
   constructor() {
     this.url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/sbQptczQF0U2Q2jYZYzk/reservations';
@@ -23,7 +25,7 @@ class Reservations {
     await fetch(`${this.url}?item_id=${id}`)
       .then((response) => response.text())
       .then((data) => {
-        if (data === '') {
+        if (JSON.parse(data).error) {
           this.reservations = [];
         } else {
           this.reservations = JSON.parse(data);
@@ -100,7 +102,7 @@ const activateReservations = async () => {
       submit.type = 'submit';
       submit.innerHTML = 'Reserve';
       reservationList.classList.add('reservation-list');
-      listTitle.innerHTML = 'Reservations';
+      listTitle.innerHTML = 'Reservations (0)';
       reservationsSection.classList.remove('hidden');
       screen.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
@@ -126,11 +128,18 @@ const activateReservations = async () => {
 
       reservations.getReserves(id)
         .then((data) => {
-          data.forEach((item) => {
+          if (data.length > 0) {
+            data.forEach((item) => {
+              const newReservation = document.createElement('p');
+              newReservation.innerHTML = `${item.date_start} - ${item.date_end} by ${item.username}.`;
+              reservationList.appendChild(newReservation);
+            });
+            counter(reservationList, listTitle, 'Reservations');
+          } else {
             const newReservation = document.createElement('p');
-            newReservation.innerHTML = `${item.date_start} - ${item.date_end} by ${item.username}.`;
+            newReservation.innerHTML = '<em>No reservations yet. Be the first to reserve!</em>';
             reservationList.appendChild(newReservation);
-          });
+          }
         });
 
       submit.addEventListener('click', (e) => {
@@ -146,6 +155,7 @@ const activateReservations = async () => {
                   newReservation.innerHTML = `${item.date_start} - ${item.date_end} by ${item.username}.`;
                   reservationList.appendChild(newReservation);
                 });
+                counter(reservationList, listTitle, 'Reservations');
               });
           });
         reservationMaker.value = '';

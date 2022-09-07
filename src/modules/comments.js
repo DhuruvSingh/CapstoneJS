@@ -71,7 +71,6 @@ const activateComments = async () => {
       // adding attributes
       img.src = list[id].image.original;
       img.alt = `${list[id].name} poster image`;
-      commentSection.innerHTML = '';
       closeBtn.classList.add('closeBtn');
       closeBtn.innerHTML = '&#10008;';
       closeBtn.type = 'button';
@@ -99,6 +98,7 @@ const activateComments = async () => {
       screen.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
       // appending elements
+      commentSection.innerHTML = '';
       commentSection.appendChild(closeBtn);
       info.appendChild(title);
       info.appendChild(tag);

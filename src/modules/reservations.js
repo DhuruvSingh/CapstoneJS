@@ -52,7 +52,6 @@ const activateReservations = async () => {
   const screen = document.querySelector('.screen');
   buttons.forEach((button, id) => {
     button.addEventListener('click', () => {
-      console.log(`button ${id} clicked`);
       // creating elements
       const img = document.createElement('img');
       const closeBtn = document.createElement('button');
@@ -149,9 +148,9 @@ const activateReservations = async () => {
                 });
               });
           });
-          reservationMaker.value = '';
-          startDate.value = '';
-          endDate.value = '';
+        reservationMaker.value = '';
+        startDate.value = '';
+        endDate.value = '';
       });
     });
   });

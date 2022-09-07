@@ -4,7 +4,7 @@ const getData = async () => {
   const data = await res.json();
   list = [];
   for (let i = 0; i < 16; i += 1) {
-    list.push(data[i - 8 & i + 8]);
+    list.push(data[i + 8]);
   }
 };
 

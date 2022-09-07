@@ -29,7 +29,7 @@ const display = async () => {
       <span class="num">0</span> <span>likes</span>
     </div>
     <button type="button" class="commentBtn">Comments</button><br>
-    <button type="button" class="Reservation-btns">Reservations</button>
+    <button type="button" class="reservation-btns">Reservations</button>
     `;
     section.appendChild(div);
   });

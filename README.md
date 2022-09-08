@@ -29,7 +29,7 @@ If you installed git you can clone the code to your machine, or download a ZIP o
 
 Download the ZIP from this location, or run the following git command to clone the files to your machine:
 
-`git clone https://github.com/Peter1907/CapstoneJS.git `
+`git clone https://github.com/DhuruvSingh/CapstoneJS.git `
 - Once the files are on your machine, open the Portfolio folder in Visual Studio Code.
 - With the files open in Visual Studio Code, press the Go Live button at the bottom of the window to launch the files with Live Server.
 - You can also directly open the HTML in the "dist" directory.

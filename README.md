@@ -17,9 +17,9 @@
 
 ## Screenshots
 
-![](../capstone-2/media/SCREEN01.JPG)
-![](../capstone-2/media/SCREEN02.JPG)
-![](../capstone-2/media/SCREEN03.JPG)
+![](media/SCREEN01.JPG)
+![](media/SCREEN02.JPG)
+![](media/SCREEN03.JPG)
 
 ### Setup
 

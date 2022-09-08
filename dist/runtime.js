@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
  * This devtool is neither made for production nor for readable output files.
@@ -158,7 +159,7 @@
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkcapstone_2"] = self["webpackChunkcapstone_2"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkCapstoneJS"] = self["webpackChunkCapstoneJS"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

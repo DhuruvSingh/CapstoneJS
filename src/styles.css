@@ -114,7 +114,11 @@ header {
 
 .heart:active {
   transform: scale(1.3);
-  color: antiquewhite;
+  color: rgb(218, 45, 45);
+}
+
+.heart:visited {
+  color: rgb(218, 45, 45);
 }
 
 .likes {

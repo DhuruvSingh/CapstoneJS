@@ -13,7 +13,7 @@
 
 ## Live Demo 
 
-[Live Demo Link](https://peter1907.github.io/CapstoneJS/)
+[Live Demo Link](https://DhuruvSingh.github.io/CapstoneJS/)
 
 ## Screenshots
 

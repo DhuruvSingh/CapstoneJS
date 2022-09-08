@@ -42,7 +42,7 @@ button:active {
 
 header {
   width: 100%;
-  font-size: 26px;
+  font-size: 24px;
   background-color: #050f14dc;
   filter: drop-shadow(0 0 20px #ce0000);
   font-family: 'Agency FB', sans-serif;
@@ -56,7 +56,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0;
   max-width: 1200px;
   gap: 100px;
 }
@@ -76,11 +75,11 @@ header {
 }
 
 .logo img {
-  width: 100px;
+  width: 70px;
 }
 
 .shows {
-  margin-top: 150px;
+  margin-top: 120px;
   align-self: flex-end;
   margin-right: 100px;
 }
@@ -121,7 +120,7 @@ header {
 .item img {
   border-radius: 10px;
   box-shadow: 0 0 15px black;
-  filter: drop-shadow(0 0 5px #f00) drop-shadow(0 0 5px #fd3d0d);
+  filter: drop-shadow(0 0 5px #f00);
 }
 
 .item-header {
@@ -170,6 +169,9 @@ header {
 
 .comments img {
   max-width: 450px;
+  max-height: 75vh;
+  align-self: center;
+  justify-self: flex-start;
   border-radius: 20px;
 }
 
@@ -278,6 +280,9 @@ header {
 
 .reservations img {
   max-width: 450px;
+  max-height: 75vh;
+  align-self: center;
+  justify-self: flex-start;
   border-radius: 20px;
 }
 

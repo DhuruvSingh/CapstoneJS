@@ -32,8 +32,8 @@ button {
 }
 
 button:hover {
-  background-color: #ff0000;
-  filter: drop-shadow(0 0 5px #ff0000);
+  background-color: #f00;
+  filter: drop-shadow(0 0 5px #f00);
 }
 
 button:active {
@@ -114,14 +114,14 @@ header {
 .item h3 {
   font-family: 'Agency FB', sans-serif;
   color: #ffe9e8;
-  filter: drop-shadow(2px 3px 1px #ff0000);
+  filter: drop-shadow(2px 3px 1px #f00);
   font-size: 22px;
 }
 
 .item img {
   border-radius: 10px;
   box-shadow: 0 0 15px black;
-  filter: drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 5px #fd3d0d);
+  filter: drop-shadow(0 0 5px #f00) drop-shadow(0 0 5px #fd3d0d);
 }
 
 .item-header {
@@ -140,12 +140,12 @@ header {
 
 .heart:hover {
   animation: alternate 0.5s ease-in-out infinite;
-  filter: drop-shadow(0 0 5px #ff0000) drop-shadow(0 0 5px #ff0000);
+  filter: drop-shadow(0 0 5px #f00) drop-shadow(0 0 5px #f00);
 }
 
 .heart:active {
   transform: scale(1.2);
-  color: #ff0000;
+  color: #f00;
 }
 
 .likes {
@@ -186,7 +186,7 @@ header {
 
 .closeBtn:hover {
   background-color: transparent;
-  color: #ff0000;
+  color: #f00;
 }
 
 .text-content {

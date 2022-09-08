@@ -43,9 +43,12 @@ button:active {
 header {
   width: 100%;
   font-size: 26px;
-  background-color: #050f14;
+  background-color: #050f14dc;
   filter: drop-shadow(0 0 20px #ce0000);
   font-family: 'Agency FB', sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 30;
 }
 
 .header-container {
@@ -61,6 +64,7 @@ header {
 .header-container div {
   color: #ffe9e8;
   filter: drop-shadow(2px 5px 1px #ce0000);
+  filter: blur(0);
 }
 
 .header-container > * {
@@ -72,12 +76,11 @@ header {
 }
 
 .logo img {
-  border-radius: 50px;
   width: 100px;
 }
 
 .shows {
-  margin-top: 50px;
+  margin-top: 150px;
   align-self: flex-end;
   margin-right: 100px;
 }

@@ -1,4 +1,8 @@
 import './styles.css';
-import display from './displayItems.js';
+import display from './modules/displayItems.js';
+import activateComments from './modules/comments.js';
 
-display();
+display()
+  .then(() => {
+    activateComments();
+  });

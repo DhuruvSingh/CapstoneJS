@@ -1,3 +1,5 @@
+import counter from './counter.js';
+
 class Comments {
   constructor() {
     this.url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/sbQptczQF0U2Q2jYZYzk/comments';
@@ -22,7 +24,7 @@ class Comments {
     await fetch(`${this.url}?item_id=${id}`)
       .then((response) => response.text())
       .then((data) => {
-        if (data === '') {
+        if (JSON.parse(data).error) {
           this.comments = [];
         } else {
           this.comments = JSON.parse(data);
@@ -62,6 +64,7 @@ const activateComments = async () => {
       const tag03 = document.createElement('span');
       const tag04 = document.createElement('span');
       const commentsBox = document.createElement('div');
+      const commentsTitle = document.createElement('h3');
       const commentForm = document.createElement('form');
       const commenter = document.createElement('input');
       const comment = document.createElement('textarea');
@@ -82,6 +85,7 @@ const activateComments = async () => {
       tag03.innerHTML = `<strong>Primered:</strong> ${list[id].premiered}`;
       tag04.innerHTML = `<strong>Runtime:</strong> ${list[id].runtime} minutes`;
       commentsBox.classList.add('comments-section');
+      commentsTitle.innerHTML = 'Add a Comment';
       commentForm.classList.add('comment-form');
       commenter.id = 'commenter';
       commenter.setAttribute('type', 'text');
@@ -93,7 +97,7 @@ const activateComments = async () => {
       submit.type = 'submit';
       submit.innerHTML = 'Add Comment';
       commentList.classList.add('comment-list');
-      listTitle.innerHTML = 'Comments';
+      listTitle.innerHTML = 'Comments (0)';
       commentSection.classList.remove('hidden');
       screen.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
@@ -109,7 +113,7 @@ const activateComments = async () => {
       commentForm.appendChild(comment);
       commentForm.appendChild(submit);
       commentList.appendChild(listTitle);
-      commentsBox.append(commentForm, commentList);
+      commentsBox.append(commentsTitle, commentForm, commentList);
       textContent.append(info, commentsBox);
       commentSection.append(img, textContent);
 
@@ -121,11 +125,18 @@ const activateComments = async () => {
 
       comments.getComments(id)
         .then((data) => {
-          data.forEach((comment) => {
+          if (data.length > 0) {
+            data.forEach((comment) => {
+              const newComment = document.createElement('p');
+              newComment.innerHTML = `<strong>${comment.creation_date}:</strong> ${comment.username}: "${comment.comment}".`;
+              commentList.appendChild(newComment);
+            });
+            counter(commentList, listTitle, 'Comments');
+          } else {
             const newComment = document.createElement('p');
-            newComment.innerHTML = `<strong>${comment.creation_date}:</strong> ${comment.username}: "${comment.comment}".`;
+            newComment.innerHTML = '<em>No comments yet. Be the first to comment!</em>';
             commentList.appendChild(newComment);
-          });
+          }
         });
 
       submit.addEventListener('click', (e) => {
@@ -141,6 +152,7 @@ const activateComments = async () => {
                   newComment.innerHTML = `<strong>${comment.creation_date}:</strong> ${comment.username}: "${comment.comment}".`;
                   commentList.appendChild(newComment);
                 });
+                counter(commentList, listTitle, 'Comments');
               });
           });
         commenter.value = '';

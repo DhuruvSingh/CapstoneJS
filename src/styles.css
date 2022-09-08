@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Lobster&display=swap');
+@import url('http://fonts.cdnfonts.com/css/agency-fb');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(193, 193, 193);
+  cursor: default;
+  background-image: url('../media/neon02.jpg');
+  background-position-y: 0%;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  color: #ffe9e8;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #ce0000;
+  filter: drop-shadow(0 0 5px #ce0000);
+  color: antiquewhite;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-family: 'Agency FB', sans-serif;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #f00;
+  filter: drop-shadow(0 0 5px #f00);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+header {
+  width: 100%;
+  font-size: 24px;
+  background-color: #050f14dc;
+  filter: drop-shadow(0 0 20px #ce0000);
+  font-family: 'Agency FB', sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  gap: 100px;
+}
+
+.header-container div {
+  color: #ffe9e8;
+  filter: drop-shadow(2px 5px 1px #ce0000);
+  filter: blur(0);
+}
+
+.header-container > * {
+  cursor: pointer;
+}
+
+.header-container div:hover {
+  transform: scale(1.05);
+}
+
+.logo img {
+  width: 70px;
+}
+
+.shows {
+  margin-top: 120px;
+  align-self: flex-end;
+  margin-right: 100px;
+}
+
+.shows h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.series {
+  text-align: center;
+  width: 65vw;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px auto;
+  column-gap: 100px;
+  row-gap: 70px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 210px;
+}
+
+.item h3 {
+  font-family: 'Agency FB', sans-serif;
+  color: #ffe9e8;
+  filter: drop-shadow(2px 3px 1px #f00);
+  font-size: 22px;
+}
+
+.item img {
+  border-radius: 10px;
+  box-shadow: 0 0 15px black;
+  filter: drop-shadow(0 0 5px #f00);
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.heart {
+  transition: transform 0.2s ease-out;
+  color: #ffe9e8;
+  font-size: 200%;
+  cursor: pointer;
+}
+
+.heart:hover {
+  animation: alternate 0.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px #f00) drop-shadow(0 0 5px #f00);
+}
+
+.heart:active {
+  transform: scale(1.2);
+  color: #f00;
+}
+
+.likes {
+  color: #ffe9e8;
+  align-self: flex-end;
+}
+
+.comments {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #050f14;
+  filter: drop-shadow(0 0 10px #ce0000);
+  padding: 40px;
+  gap: 60px;
+  border-radius: 20px;
+  z-index: 100;
+  max-height: 80vh;
+}
+
+.comments img {
+  max-width: 450px;
+  max-height: 75vh;
+  align-self: center;
+  justify-self: flex-start;
+  border-radius: 20px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #ffe9e8;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.closeBtn:hover {
+  background-color: transparent;
+  color: #f00;
+}
+
+.text-content {
+  overflow-y: scroll;
+  padding: 0 10px;
+}
+
+.info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  grid-column: 1 / 3;
+  color: #ce0000;
+  font-family: 'Agency FB', sans-serif;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 50px;
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 18px;
+}
+
+.comments-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px auto;
+  font-family: 'Agency FB', sans-serif;
+  font-size: 20px;
+}
+
+.comment-list h3 {
+  margin-bottom: 15px;
+  font-family: 'Agency FB', sans-serif;
+  color: #ce0000;
+  font-size: 24px;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.comment-form {
+  margin-top: -25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.comments-section h3 {
+  color: #ce0000;
+  font-family: 'Agency FB', sans-serif;
+  font-size: 24px;
+}
+
+.comment-form button {
+  align-self: flex-end;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid #ce0000;
+  font-family: 'Agency FB', sans-serif;
+  background-color: #ffe9e8;
+}
+
+.reservations {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #050f14;
+  filter: drop-shadow(0 0 10px #ce0000);
+  padding: 40px;
+  gap: 60px;
+  border-radius: 20px;
+  z-index: 100;
+  max-height: 80vh;
+}
+
+.reservations img {
+  max-width: 450px;
+  max-height: 75vh;
+  align-self: center;
+  justify-self: flex-start;
+  border-radius: 20px;
+}
+
+.reservations-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px auto;
+  font-family: 'Agency FB', sans-serif;
+  font-size: 20px;
+}
+
+.reservations-section h3 {
+  color: #ce0000;
+  font-family: 'Agency FB', sans-serif;
+  font-size: 24px;
+}
+
+.reservation-list h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #ce0000;
+  font-family: 'Agency FB', sans-serif;
+}
+
+.reservation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.reservation-form {
+  margin-top: -25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.reservation-form button {
+  align-self: flex-end;
+}
+
+.reservation-form input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid #ce0000;
+  font-family: 'Agency FB', sans-serif;
+  background-color: #ffe9e8;
+}
+
+footer {
+  font-family: 'Goudy Bookletter 1911', serif;
+  width: 100%;
+  bottom: 0;
+  padding: 20px;
+  padding-left: 3%;
+  background-color: #050f14;
+  filter: drop-shadow(0 0 20px #ce0000);
+}
+
+footer > a {
+  font-family: 'Goudy Bookletter 1911', serif;
+  text-decoration: none;
+  color: orangered;
+}
+
+footer > a:hover {
+  filter: drop-shadow(0 0 5px antiquewhite);
+}
+
+.screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.7;
+  z-index: 25;
+}
+
+.hidden {
+  display: none;
+}
